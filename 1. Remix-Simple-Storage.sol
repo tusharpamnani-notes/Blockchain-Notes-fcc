@@ -27,9 +27,13 @@ contract SimpleStorage{
     // an array of data type People named "people"
     // since the size isn't mentioned, this is a dynamic array
 
-    function store(uint256 _favouriteNumber) public {
+    function store(uint256 _favouriteNumber) public virtual {
         // _favouriteNumber is a variable passed as a parameter to the function
         // "public" states that the function is public
+
+        // "virtual" is related to the contract "ExtraStorage.sol"
+        // This is used to override the function in the child contract
+        // Ignore this for now
 
         favouriteNumber = _favouriteNumber; 
     }
